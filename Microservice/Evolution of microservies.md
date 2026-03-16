@@ -8,7 +8,7 @@ Before jumping into **Microservices**, it is important to understand how we got 
 
 In the early days, applications were built as a single, unified unit. Imagine a giant LEGO castle where every brick is glued together; if you want to change one window, you have to move the whole castle.
 
-* **The Workflow:** Developers work on one massive codebase. It is packaged into a single file (like a `.WAR` or `.JAR`) and deployed to one server supported by a single database.
+* **The Workflow:** Developers work on one massive codebase. It is packaged into a single file (like a `.WAR` or `.EAR`) and deployed to one server supported by a single database.
 
 
 
