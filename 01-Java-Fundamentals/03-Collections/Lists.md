@@ -13,20 +13,26 @@ When to use
 - ArrayList: most general-purpose, fast random access.
 - LinkedList: frequent insertions/removals at both ends or iterators that modify the list.
 
-Example
+Examples and benchmarks
+
+ArrayList append amortized O(1): when capacity is reached, it grows (usually by 1.5x), causing occasional O(n) resizes; amortized cost remains O(1).
 
 ```java
 List<String> arrayList = new ArrayList<>();
 arrayList.add("a");
-arrayList.get(0);
+System.out.println(arrayList.get(0));
 
 List<String> linkedList = new LinkedList<>();
 linkedList.addFirst("start");
+System.out.println(linkedList.removeFirst());
 ```
 
-Common pitfalls
-- Prefer interfaces (List) over concrete classes when declaring variables.
-- Avoid using LinkedList for random access.
+Common interview tasks
+- Reverse an ArrayList vs reverse a LinkedList — explain cost of index access and iterator usage.
+- Find k-th from end in a LinkedList (two-pointer technique).
 
-References / TODO
-- Add step-by-step benchmarks and common interview problems.
+Gotchas
+- Declaring variables as concrete types (ArrayList) instead of interfaces (List) reduces flexibility.
+
+References
+- See Collections.md for interview Q&A and complexity reminders.

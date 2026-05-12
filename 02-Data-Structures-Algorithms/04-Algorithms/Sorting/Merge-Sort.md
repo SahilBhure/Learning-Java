@@ -4,7 +4,15 @@ Overview
 
 MergeSort divides the array and merges sorted halves. Stable and O(n log n) worst-case.
 
-Example notes
-- Requires O(n) extra space for merging; in-place variants exist with trade-offs.
+Recursive merge sort sketch
+```java
+void mergeSort(int[] a, int l, int r) {
+  if (l >= r) return;
+  int m = (l + r) >>> 1;
+  mergeSort(a, l, m); mergeSort(a, m+1, r);
+  merge(a, l, m, r);
+}
+```
 
-TODO: add recursive and iterative implementations and compare performance.
+Space and performance
+- Typical merges require O(n) extra space; stable and predictable performance.

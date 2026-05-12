@@ -4,17 +4,14 @@ Overview
 
 Linked lists store nodes with next (and optional prev) pointers. They are good for insert/remove at known node positions.
 
-Complexities
-- Access by index: O(n)
-- Insert/remove at head: O(1)
+Common algorithms
+- Reverse a linked list (iterative and recursive)
+- Detect cycle (Floyd's tortoise-hare)
+- Merge two sorted lists
 
-Example (singly-linked node)
-
+Reversing example (iterative)
 ```java
-class Node { int val; Node next; }
+Node prev = null; Node cur = head;
+while (cur != null) { Node next = cur.next; cur.next = prev; prev = cur; cur = next; }
+return prev; // new head
 ```
-
-Common problems
-- Reverse linked list, detect cycle (Floyd's tortoise & hare), merge two sorted lists.
-
-TODO: add implementations and walk-throughs.

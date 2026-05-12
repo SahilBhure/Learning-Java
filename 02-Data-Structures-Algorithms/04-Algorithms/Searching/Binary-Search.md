@@ -4,21 +4,18 @@ Overview
 
 Binary search works on sorted arrays with O(log n) time complexity.
 
-Preconditions
-- Input must be sorted.
+Variants
+- Find first/last occurrence, lower bound and upper bound.
 
-Example (iterative)
-
+First occurrence example (find leftmost index)
 ```java
-int binarySearch(int[] a, int target) {
-  int lo = 0, hi = a.length - 1;
+int first(int[] a, int target) {
+  int lo = 0, hi = a.length - 1, ans = -1;
   while (lo <= hi) {
     int mid = lo + (hi - lo) / 2;
-    if (a[mid] == target) return mid;
-    if (a[mid] < target) lo = mid + 1; else hi = mid - 1;
+    if (a[mid] >= target) { if (a[mid] == target) ans = mid; hi = mid - 1; }
+    else lo = mid + 1;
   }
-  return -1;
+  return ans;
 }
 ```
-
-TODO: add variations (first/last occurrence, lower/upper bound).

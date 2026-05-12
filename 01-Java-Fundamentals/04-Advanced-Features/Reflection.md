@@ -4,19 +4,14 @@ Overview
 
 Reflection enables inspecting and manipulating classes, methods, and fields at runtime. Useful for frameworks (serialization, DI), but has performance and security costs.
 
-Common APIs
-- Class.forName, Class.getDeclaredMethods, Method.invoke, Field.setAccessible(true)
-
-Example
+Examples
 
 ```java
-Class<?> c = Class.forName("com.example.Person");
-Method m = c.getMethod("getName");
-Object name = m.invoke(instance);
+Class<?> c = Class.forName("java.lang.String");
+Method m = c.getMethod("substring", int.class);
+String s = (String) m.invoke("hello", 1);
 ```
 
-Notes
-- Avoid excessive reflection in performance-sensitive code.
-- Respect security manager policies and avoid breaking encapsulation without good reason.
-
-TODO: add serialization/DIs examples.
+Use-cases and cautions
+- Use reflection in libraries/frameworks; avoid frequent use in hot loops.
+- Reflection can break encapsulation; prefer documented APIs.

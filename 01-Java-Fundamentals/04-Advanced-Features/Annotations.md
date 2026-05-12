@@ -10,12 +10,13 @@ Common built-ins
 Custom annotations
 - Define with @interface and specify @Retention and @Target.
 
-Example
+Examples
 
 ```java
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface Timed { }
+public @interface Timed { long value() default 0; }
 ```
 
-TODO: add examples for validation annotations, DI frameworks, and annotation processors.
+Use-cases
+- Validation frameworks (JSR-380), dependency injection (Spring), compile-time code generation (Lombok/AutoValue), and AOP instrumentation.

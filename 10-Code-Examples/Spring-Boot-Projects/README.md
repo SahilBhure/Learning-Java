@@ -1,11 +1,8 @@
 # Spring Boot Projects
 
-Overview
+Starter project guidance
 
-Starter projects and examples for Spring Boot topics contained in the curriculum (REST APIs, JPA, Security, Testing).
+Provide a minimal Spring Boot starter template with REST endpoints, JPA, and tests. Include run instructions and Dockerfile.
 
-Structure
-- starter-project/
-- sample-rest-api/
-
-TODO: add full project skeletons and instructions to run with Docker and Maven/Gradle.
+Example
+- starter-project/ contains a scaffolded Maven/Gradle project with Readme and run steps.

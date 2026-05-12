@@ -4,18 +4,18 @@ Overview
 
 Stacks follow LIFO and are used for expression evaluation, recursive simulation, and backtracking.
 
-Implementations
-- ArrayDeque (recommended) or custom linked-node stack.
-
-Example
-
+Solved example: Valid parentheses
 ```java
-Deque<Integer> stack = new ArrayDeque<>();
-stack.push(1); // push
-int top = stack.pop(); // pop
+boolean isValid(String s) {
+  Deque<Character> st = new ArrayDeque<>();
+  for (char c : s.toCharArray()) {
+    if (c == '(') st.push(')');
+    else if (c == '{') st.push('}');
+    else if (c == '[') st.push(']');
+    else if (st.isEmpty() || st.pop() != c) return false;
+  }
+  return st.isEmpty();
+}
 ```
 
-Common interview problems
-- Valid parentheses, next greater element, evaluate postfix expressions.
-
-TODO: add solved examples.
+Use ArrayDeque for performance and predictable behavior.

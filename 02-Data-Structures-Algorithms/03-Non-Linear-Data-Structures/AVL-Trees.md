@@ -2,9 +2,16 @@
 
 Overview
 
-AVL trees are self-balancing BSTs that maintain a height-balance invariant. Rotations (LL, RR, LR, RL) keep height O(log n).
+AVL trees are self-balancing BSTs that maintain height-balance invariant. Rotations (LL, RR, LR, RL) keep height O(log n).
 
-Use-cases
-- When strict balancing is required; higher rotation overhead than some alternatives but ensures worst-case bounds.
+Rotation example (right rotation)
+```
+    y                x
+   / \     ->       / \
+  x   T3           T1  y
+ / \                  / \
+T1  T2               T2  T3
+```
 
-TODO: add rotation step-by-step examples and code.
+Implementation notes
+- Maintain height on every node; after insert/delete, update heights and perform rotations as needed.

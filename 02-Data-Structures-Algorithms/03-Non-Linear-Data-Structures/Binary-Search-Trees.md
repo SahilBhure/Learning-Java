@@ -4,10 +4,9 @@ Overview
 
 BST property: left < node < right. Provides average O(log n) search/insert/delete when balanced.
 
-Operations
-- Search, insert, delete — handle 0/1/2 child cases
+Delete operation (three cases)
+- Node with no children: remove.
+- Node with one child: replace node with child.
+- Node with two children: replace with inorder successor (smallest in right subtree) and delete successor.
 
-Pitfalls
-- Unbalanced BST degenerates to linked list (O(n)).
-
-TODO: add code for insert/delete and balancing strategies.
+Code sketch for delete, insert, search can be added in examples folder.

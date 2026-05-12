@@ -9,13 +9,9 @@ Big-O notation describes asymptotic upper bounds of algorithm runtime or space r
 - O(n log n): linearithmic
 - O(n^2): quadratic
 
-Examples
-- Binary search: O(log n)
-- Merge sort: O(n log n)
-- Nested loops: O(n^2)
+Worked example: binary search
+- On a sorted array of size n, binary search halves search space each step: O(log n)
 
-Tips
-- Drop lower-order terms for large n (e.g., O(n^2 + n) -> O(n^2)).
-- Consider best, average, worst-case when relevant.
-
-TODO: add worked examples and exercises.
+Practical tips
+- For small n, constants matter; big-O hides constant factors.
+- Consider average vs worst-case depending on the use-case.

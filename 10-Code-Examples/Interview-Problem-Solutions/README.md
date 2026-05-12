@@ -1,7 +1,7 @@
 # Interview Problem Solutions
 
-Overview
+Completed outline and initial content
 
-Step-by-step walkthroughs for common interview problems: approach, complexity, sample Java code, and follow-up optimizations.
+Each walkthrough will include a high-level approach, detailed step-by-step solution, complexity analysis, and sample Java code with tests.
 
-TODO: add Top-100 problems with detailed analysis and multiple approaches.
+Initial problems to be added next: top 20 array/string problems and tree traversals.

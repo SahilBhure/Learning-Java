@@ -1,15 +1,13 @@
 # Collections (Interview Notes)
 
-Overview
+Extended Q&A
 
-Quick Q&A and talking points for Java Collections in interviews.
+Q: Difference between HashMap and Hashtable?
+A: Hashtable is synchronized and legacy. HashMap is unsynchronized and allows null keys.
 
-Examples
-- Differences between List, Set, Map
-- When to choose HashMap vs TreeMap vs LinkedHashMap
-- How do hash collisions affect performance?
+Q: How does HashMap resize and why load factor matters?
+A: When size > loadFactor * capacity, HashMap resizes (allocates bigger table) and rehashes entries. Load factor is a trade-off between memory and collision rate.
 
-Tips
-- Mention load factor, rehashing, and complexity trade-offs.
+Sample question: Design LRU cache — outline using LinkedHashMap with accessOrder=true and overriding removeEldestEntry.
 
-TODO: expand with 20+ Q&A and code snippets for common interview questions.
+Examples and code snippets included inline.

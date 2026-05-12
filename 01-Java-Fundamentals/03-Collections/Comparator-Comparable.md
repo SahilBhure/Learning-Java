@@ -10,21 +10,29 @@ Comparable
 Comparator
 - Use Comparator.comparing, reversed(), thenComparing(), or lambda expressions for ad-hoc ordering.
 
-Example
+Examples
 
 ```java
 public class Person implements Comparable<Person> {
-  private String name;
-  private int age;
+  private final String name;
+  private final int age;
+  public Person(String name, int age){ this.name = name; this.age = age; }
   public int compareTo(Person other) { return Integer.compare(this.age, other.age); }
+  public String getName(){ return name; }
 }
 
 Comparator<Person> byName = Comparator.comparing(Person::getName);
-Collections.sort(list, byName);
+List<Person> people = List.of(new Person("A",20), new Person("B",18));
+people.stream().sorted(byName).forEach(p -> System.out.println(p.getName()));
 ```
 
-Notes
-- Use Comparator.nullsFirst/Last when nulls are possible.
-- For performance, avoid expensive comparators in hot loops.
+Multi-field sorting and null handling
+- Use Comparator.nullsFirst/Last and thenComparing for tie-breakers.
 
-TODO: add examples for multi-field sorting and tie-breakers.
+```java
+Comparator<Person> cmp = Comparator.comparing(Person::getAge)
+                                   .thenComparing(Person::getName);
+```
+
+Performance notes
+- Avoid expensive comparators in hot loops; precompute keys where possible.

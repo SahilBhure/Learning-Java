@@ -1,12 +1,11 @@
 # DSA Solutions
 
-Overview
+Plan and initial entries
 
-This folder will host curated solution code for common DSA problems with explanations and complexity analysis.
+Structure: easy/, medium/, hard/ with canonical Java solutions and explanations. Each solution will include:
+- Problem statement
+- Approach and complexity
+- Java implementation
+- Tests and edge cases
 
-Structure suggestions
-- easy/
-- medium/
-- hard/
-
-TODO: populate with canonical solutions (Java implementations) and links to README topics.
+Next steps: populate Top-100 problems incrementally.

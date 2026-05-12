@@ -2,15 +2,14 @@
 
 Overview
 
-Trie (prefix tree) is a tree-based data structure for storing associative arrays where keys are usually strings. Useful for prefix search, autocomplete.
+Trie (prefix tree) is efficient for prefix operations and autocomplete.
 
-Operations
-- insert, search, startsWith
+Basic operations
+- insert, search, startsWith — each operation runs in O(L) where L is key length.
 
-Example
-
+Example node
 ```java
 class TrieNode { TrieNode[] children = new TrieNode[26]; boolean isWord; }
 ```
 
-TODO: add implementation and complexity analysis.
+Use-cases: autocomplete, prefix-counting, spell-check suggestions.

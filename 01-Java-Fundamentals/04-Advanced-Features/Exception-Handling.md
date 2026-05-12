@@ -4,12 +4,11 @@ Overview
 
 Java exceptions are either checked (must be declared/handled) or unchecked (RuntimeException). Use try-with-resources for AutoCloseable resources.
 
-Best practices
-- Prefer meaningful custom exceptions when appropriate.
-- Avoid using exceptions for flow control.
-- Clean up resources using try-with-resources.
+Design guidelines
+- Prefer meaningful checked exceptions for recoverable conditions and unchecked for programming errors.
+- Wrap and translate low-level exceptions at boundaries of modules (e.g., DAO layer to service-layer exceptions).
 
-Example
+Examples
 
 ```java
 try (BufferedReader r = Files.newBufferedReader(path)) {
@@ -19,4 +18,9 @@ try (BufferedReader r = Files.newBufferedReader(path)) {
 }
 ```
 
-TODO: add patterns for API design and exception translation.
+Anti-patterns
+- Do not swallow exceptions (empty catch blocks).
+- Avoid using exceptions for normal control flow.
+
+Testing notes
+- Use custom exception types to make behavior explicit and testable.

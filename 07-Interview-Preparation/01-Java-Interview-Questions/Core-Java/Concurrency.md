@@ -1,12 +1,16 @@
 # Concurrency (Interview Notes)
 
-Overview
+Expanded notes
 
-Key concurrency topics to cover: threads vs tasks, synchronization, volatile, locks, concurrent collections, problems like deadlocks and race conditions.
+Topics covered: threads vs executor, synchronization primitives, volatile, locks, concurrent collections, thread pools, deadlocks, livelocks.
 
-Talking points
-- Explain synchronized vs Lock, ReentrantLock advantages.
-- Explain volatile guarantees and when it’s insufficient.
-- Describe Executors, ThreadPools, and common pitfalls (thread leaks, unbounded queues).
+Example: simple producer-consumer using ArrayBlockingQueue
+```java
+BlockingQueue<Integer> q = new ArrayBlockingQueue<>(100);
+ExecutorService ex = Executors.newFixedThreadPool(2);
+ex.submit(() -> { for (int i=0;i<100;i++) q.put(i); });
+ex.submit(() -> { while(true) System.out.println(q.take()); });
+```
 
-TODO: add sample problems and solutions (producer-consumer, dining philosophers simplified).
+Interview tips
+- Explain happens-before relationship, memory visibility issues and show brief examples for volatile and synchronized.

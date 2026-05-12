@@ -4,13 +4,12 @@ Overview
 
 Trees are hierarchical data structures. Binary tree nodes have at most two children. Tree traversals: preorder, inorder, postorder, level-order.
 
-Common operations
-- Traversal (DFS/BFS), height, insert/delete (BST-specific)
-
-Example
-
+Traversal examples
+- Recursive inorder:
 ```java
-class TreeNode { int val; TreeNode left, right; }
+void inorder(Node n) { if (n == null) return; inorder(n.left); visit(n); inorder(n.right); }
 ```
+- Iterative level-order: use a queue
 
-TODO: add traversal implementations and problem set.
+Common interview problems
+- Lowest common ancestor (LCA), diameter of binary tree, serialize/deserialize binary tree.

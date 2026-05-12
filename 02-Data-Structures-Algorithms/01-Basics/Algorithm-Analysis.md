@@ -2,12 +2,10 @@
 
 Overview
 
-Algorithm analysis examines time and space complexity, worst/average/best-case, and occasionally amortized analysis for data structure operations.
+Algorithm analysis examines time and space complexity, worst/average/best-case, and amortized analysis for data structure operations.
 
-Amortized analysis
-- Example: dynamic array resizing — individual append may cost O(n) when resizing, but amortized cost is O(1).
+Amortized analysis example: dynamic array
+- Appending to ArrayList occasionally triggers a resize costing O(n), but amortized cost per append remains O(1).
 
-Practical considerations
-- Cache, constants, and lower-level details matter for real-world performance.
-
-TODO: add sample problems and walkthroughs.
+Practical advice
+- Analyze both asymptotic complexity and constant factors; test on realistic inputs.

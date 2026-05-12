@@ -2,22 +2,23 @@
 
 Overview
 
-Streams and lambdas support a functional style of programming and make collection processing concise and expressive.
+Streams and lambdas support a functional style of programming for collections processing.
 
 Common operations
 - intermediate: map, filter, flatMap
-- terminal: collect, forEach, reduce
+- terminal: collect, reduce, forEach
 
-Example
+Examples
 
 ```java
 List<String> names = users.stream()
   .map(User::getName)
-  .filter(n -> !n.isEmpty())
+  .filter(n -> !n.isBlank())
   .collect(Collectors.toList());
+
+Map<String, Long> counts = users.stream()
+  .collect(Collectors.groupingBy(User::getCountry, Collectors.counting()));
 ```
 
-Parallel streams
-- Provide easy parallelism but watch for thread-safety and ordering concerns.
-
-TODO: add collectors examples and performance tips.
+Collectors and performance
+- Use Collectors.toList() to collect results. For large datasets consider streaming with parallelStream but measure thread-safety and ordering effects.

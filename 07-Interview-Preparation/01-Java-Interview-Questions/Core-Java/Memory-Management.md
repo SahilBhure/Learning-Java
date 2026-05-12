@@ -1,11 +1,10 @@
 # Memory Management (Interview Notes)
 
-Overview
+Expanded notes
 
-Java memory model: stack vs heap, object allocation, garbage collection basics. Key GC algorithms: Mark-and-Sweep, Generational GC.
+Java Memory Model: stack (primitive locals, references), heap (objects), metaspace (class metadata). GC overview: generational collectors (young/old), stop-the-world pauses, and ergonomics.
 
-Talking points
-- Young/Old generation, minor vs major GC
-- GC tuning knobs and impact of large heaps
+Common interview topics
+- Explain minor vs major GC, GC logs interpretation, and how allocation patterns affect GC pressure.
 
-TODO: add diagrams, common interview questions, and sample GC logs with interpretation.
+Example: reduce GC churn by using object pools cautiously only when profiling shows allocation hotspots.

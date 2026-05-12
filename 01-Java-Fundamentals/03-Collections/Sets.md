@@ -9,21 +9,26 @@ Complexity and characteristics
 - LinkedHashSet: maintains insertion order; slightly higher overhead.
 - TreeSet: sorted order (implements SortedSet), operations O(log n).
 
-When to use
-- HashSet: fast membership checks.
-- LinkedHashSet: preserve insertion order.
-- TreeSet: need ordered traversal.
-
-Example
+Examples
 
 ```java
 Set<String> s = new HashSet<>();
 s.add("apple");
-if (s.contains("apple")) { ... }
+if (s.contains("apple")) { System.out.println("has apple"); }
+
+Set<String> linked = new LinkedHashSet<>();
+linked.add("a"); linked.add("b"); // preserves order
+
+NavigableSet<Integer> tree = new TreeSet<>();
+tree.add(10); tree.add(5); System.out.println(tree.first());
 ```
 
-Notes
-- Hash collisions affect performance but Java's HashMap/HashSet handle rehashing.
-- Use Objects.hash and good equals/hashCode implementations for custom objects.
+Implementing equals/hashCode
+- Always override equals() and hashCode() for custom objects used in hash-based sets. Use Objects.hash(...) and compare relevant fields.
 
-TODO: add examples for equals/hashCode and LinkedHashSet vs TreeSet.
+Common interview questions
+- Explain difference between HashSet and TreeSet and when to use each.
+- Implement a custom hash function and discuss collision impacts.
+
+References
+- Effective Java: chapters on equals/hashcode and collections.

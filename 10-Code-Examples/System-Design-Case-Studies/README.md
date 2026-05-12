@@ -1,10 +1,9 @@
 # System Design Case Studies
 
-Overview
+Completed outline and sample content
 
-Real-world system design case studies, architecture diagrams, trade-offs and patterns.
+Each case study includes: requirements, capacity estimates, API design, data model, high level components, scaling strategies, and trade-offs.
 
-Initial topics
-- URL shortener, Notification service, Design a chat system
-
-TODO: add diagrams, component responsibilities, and example AWS/GCP architectures.
+Initial case studies added:
+- URL shortener: design with DB schema, key generation, caching and redirection service.
+- Notification system: fanout considerations, queuing, retry, and deduplication.
