@@ -1,11 +1,23 @@
 # Streams & Lambda
 
-Overview of Java Streams and Lambda expressions (functional programming constructs).
+Overview
 
-Contents:
-- Stream creation
-- Intermediate and terminal operations
-- Parallel streams
+Streams and lambdas support a functional style of programming and make collection processing concise and expressive.
 
-## TODO
-- Add examples for common transformations and collectors
+Common operations
+- intermediate: map, filter, flatMap
+- terminal: collect, forEach, reduce
+
+Example
+
+```java
+List<String> names = users.stream()
+  .map(User::getName)
+  .filter(n -> !n.isEmpty())
+  .collect(Collectors.toList());
+```
+
+Parallel streams
+- Provide easy parallelism but watch for thread-safety and ordering concerns.
+
+TODO: add collectors examples and performance tips.

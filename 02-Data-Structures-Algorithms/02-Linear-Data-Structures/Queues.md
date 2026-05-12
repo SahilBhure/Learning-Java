@@ -1,11 +1,20 @@
 # Queues
 
-Queue data structure and variants (circular queue, priority queue, deque).
+Overview
 
-Contents:
-- Enqueue/dequeue
-- Circular buffer
-- PriorityQueue overview
+Queues are FIFO. Variants include circular queues, deques, and priority queues.
 
-## TODO
-- Add examples and complexity notes
+Implementations
+- ArrayDeque for general-purpose queues
+- PriorityQueue for ordering by priority
+- BlockingQueue implementations for producer-consumer patterns
+
+Example
+
+```java
+Queue<Integer> q = new ArrayDeque<>();
+q.offer(1);
+int v = q.poll();
+```
+
+TODO: add circular buffer and lock-free queue notes.

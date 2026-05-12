@@ -1,11 +1,20 @@
 # Linked Lists
 
-Singly and doubly linked lists, operations and typical problems.
+Overview
 
-Contents:
-- Node structure
-- Insert/delete operations
-- Common interview problems
+Linked lists store nodes with next (and optional prev) pointers. They are good for insert/remove at known node positions.
 
-## TODO
-- Add sample implementations and solutions
+Complexities
+- Access by index: O(n)
+- Insert/remove at head: O(1)
+
+Example (singly-linked node)
+
+```java
+class Node { int val; Node next; }
+```
+
+Common problems
+- Reverse linked list, detect cycle (Floyd's tortoise & hare), merge two sorted lists.
+
+TODO: add implementations and walk-throughs.

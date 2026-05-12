@@ -1,10 +1,13 @@
 # Hash Tables
 
-Hash table concepts, collision resolution strategies and Java HashMap internals.
+Overview
 
-Contents:
-- Chaining vs open addressing
-- HashMap implementation notes
+Hash tables map keys to values using a hash function. Java's HashMap uses chaining and treeification for skewed buckets.
 
-## TODO
-- Add detailed diagrams and examples
+Collision resolution
+- Chaining, open addressing
+
+Notes
+- Good hashCode and equals implementations are essential.
+
+TODO: add diagrams and deep-dive into HashMap internals (resizing, threshold, load factor).

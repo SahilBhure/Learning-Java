@@ -1,10 +1,16 @@
 # Graphs
 
-Graph representations (adjacency list/matrix), traversals and common algorithms.
+Overview
 
-Contents:
-- BFS, DFS
-- Shortest paths overview
+Graphs model relationships. Representations: adjacency list (sparse), adjacency matrix (dense).
 
-## TODO
-- Add Dijkstra, Bellman-Ford, Topological sort examples
+Fundamental algorithms
+- BFS, DFS, shortest paths (Dijkstra), topological sort for DAGs
+
+Example
+
+```java
+List<List<Integer>> adj = new ArrayList<>();
+```
+
+TODO: add implementations for BFS/DFS and common interview problems (cycle detection, shortest paths).

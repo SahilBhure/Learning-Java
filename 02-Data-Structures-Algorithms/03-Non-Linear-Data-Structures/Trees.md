@@ -1,10 +1,16 @@
 # Trees
 
-Overview of tree data structures: binary trees, traversal algorithms and properties.
+Overview
 
-Contents:
-- Tree traversals (inorder/preorder/postorder)
-- Use-cases and complexity
+Trees are hierarchical data structures. Binary tree nodes have at most two children. Tree traversals: preorder, inorder, postorder, level-order.
 
-## TODO
-- Add implementations and practice problems
+Common operations
+- Traversal (DFS/BFS), height, insert/delete (BST-specific)
+
+Example
+
+```java
+class TreeNode { int val; TreeNode left, right; }
+```
+
+TODO: add traversal implementations and problem set.

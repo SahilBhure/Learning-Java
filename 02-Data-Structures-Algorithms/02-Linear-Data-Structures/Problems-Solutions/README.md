@@ -1,6 +1,12 @@
 # Problems & Solutions
 
-This folder will contain curated problems and their solutions for linear data structures.
+Overview
 
-## TODO
-- Add problem statements and solutions (easy → hard)
+This folder contains curated problems for linear data structures with solutions and complexity analysis.
+
+Structure
+- easy.md
+- medium.md
+- hard.md
+
+TODO: populate problems and step-by-step solutions prioritized by interview frequency.

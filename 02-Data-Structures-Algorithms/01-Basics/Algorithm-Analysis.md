@@ -1,10 +1,13 @@
 # Algorithm Analysis
 
-Guidelines for analyzing algorithms: amortized analysis, worst/average/best-case.
+Overview
 
-Contents:
-- Worst, average, best case
-- Amortized analysis examples
+Algorithm analysis examines time and space complexity, worst/average/best-case, and occasionally amortized analysis for data structure operations.
 
-## TODO
-- Add examples like dynamic array resizing
+Amortized analysis
+- Example: dynamic array resizing — individual append may cost O(n) when resizing, but amortized cost is O(1).
+
+Practical considerations
+- Cache, constants, and lower-level details matter for real-world performance.
+
+TODO: add sample problems and walkthroughs.

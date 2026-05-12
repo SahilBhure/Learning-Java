@@ -1,17 +1,30 @@
 # Comparator and Comparable
 
-How to compare objects in Java using Comparable and Comparator.
+Overview
 
-Contents:
-- Comparable interface
-- Comparator interface
-- Lambda comparators and method references
+Comparable (natural ordering) and Comparator (external, flexible ordering) are used to sort objects.
 
-## Example
+Comparable
+- Implement Comparable<T> and define compareTo(T o) for natural order.
+
+Comparator
+- Use Comparator.comparing, reversed(), thenComparing(), or lambda expressions for ad-hoc ordering.
+
+Example
 
 ```java
-Comparator<Person> byAge = Comparator.comparingInt(Person::getAge);
+public class Person implements Comparable<Person> {
+  private String name;
+  private int age;
+  public int compareTo(Person other) { return Integer.compare(this.age, other.age); }
+}
+
+Comparator<Person> byName = Comparator.comparing(Person::getName);
+Collections.sort(list, byName);
 ```
 
-## TODO
-- Add examples for sorting custom objects
+Notes
+- Use Comparator.nullsFirst/Last when nulls are possible.
+- For performance, avoid expensive comparators in hot loops.
+
+TODO: add examples for multi-field sorting and tie-breakers.

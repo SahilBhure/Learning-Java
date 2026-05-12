@@ -1,10 +1,13 @@
 # Heaps
 
-Heap data structure: binary heap, operations, and priority queues.
+Overview
 
-Contents:
-- Min-heap and max-heap
-- Heapify, insert, extract-min/max
+Heaps are complete binary trees commonly used to implement priority queues. Binary heap supports O(log n) insert and extract-min/max.
 
-## TODO
-- Add code and applications (heap-sort)
+Operations
+- heapify, sift-up, sift-down
+
+Applications
+- PriorityQueue, heap-sort, k-largest elements
+
+TODO: add code and examples (heapify, heap sort).
